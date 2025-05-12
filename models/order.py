@@ -16,7 +16,7 @@ from app.schemas.order import OrderCreate
 
 class EquipmentOrder(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
-    # equipment_id: Mapped[int] = mapped_column(ForeignKey("equipments.id"))
+    equipment_id: Mapped[int] = mapped_column(ForeignKey("equipments.id"))
     order_date: Mapped[datetime]
     start_time: Mapped[datetime]
     end_time: Mapped[datetime]
